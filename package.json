@@ -8,14 +8,16 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "devDependencies": {},
+  "devDependencies": {
+    "concurrently": "^9.2.1"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "tailDev": "npx @tailwindcss/cli -i ./src/css/input.css -o ./src/css/output.css --watch"
+    "tailDev": "npx @tailwindcss/cli -i ./src/css/input.css -o ./src/css/output.css --watch",
+    "dev": "concurrently \"npm run tailDev\" \"npx live-server src\""
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "type": "commonjs"
 }
-
